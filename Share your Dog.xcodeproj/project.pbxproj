@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E73B47C22A20784F00E5BBC4 /* HeaderShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73B47C12A20784E00E5BBC4 /* HeaderShape.swift */; };
+		E74FBF412A2550A400CC9CA6 /* EmojiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FBF402A2550A400CC9CA6 /* EmojiPicker.swift */; };
 		E75D39D12A046A5300124E1F /* Share_your_DogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D39D02A046A5300124E1F /* Share_your_DogApp.swift */; };
 		E75D39D32A046A5300124E1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D39D22A046A5300124E1F /* ContentView.swift */; };
 		E75D39D52A046A5400124E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E75D39D42A046A5400124E1F /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		E79865B22A249D2A00835B99 /* ServiceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79865B12A249D2A00835B99 /* ServiceSection.swift */; };
 		E79865B42A249D4E00835B99 /* ServiceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79865B32A249D4E00835B99 /* ServiceCardView.swift */; };
 		E79865B62A249D9E00835B99 /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79865B52A249D9E00835B99 /* AccountSection.swift */; };
+		E79865B92A2509DC00835B99 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79865B82A2509DC00835B99 /* ImagePicker.swift */; };
 		E7C113782A21621600240679 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C113772A21621600240679 /* VideoPlayer.swift */; };
 		E7DE86AF2A0C7F8C00EFDF29 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE86AE2A0C7F8C00EFDF29 /* ChatViewModel.swift */; };
 		E7E447452A0CC57300838620 /* MyLittleHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E447442A0CC57300838620 /* MyLittleHelperView.swift */; };
@@ -124,6 +126,7 @@
 
 /* Begin PBXFileReference section */
 		E73B47C12A20784E00E5BBC4 /* HeaderShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderShape.swift; sourceTree = "<group>"; };
+		E74FBF402A2550A400CC9CA6 /* EmojiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPicker.swift; sourceTree = "<group>"; };
 		E75D39CD2A046A5300124E1F /* Share your Dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Share your Dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75D39D02A046A5300124E1F /* Share_your_DogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share_your_DogApp.swift; sourceTree = "<group>"; };
 		E75D39D22A046A5300124E1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -195,6 +198,7 @@
 		E79865B12A249D2A00835B99 /* ServiceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSection.swift; sourceTree = "<group>"; };
 		E79865B32A249D4E00835B99 /* ServiceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCardView.swift; sourceTree = "<group>"; };
 		E79865B52A249D9E00835B99 /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
+		E79865B82A2509DC00835B99 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E7C113772A21621600240679 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		E7DE86AE2A0C7F8C00EFDF29 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		E7E447442A0CC57300838620 /* MyLittleHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLittleHelperView.swift; sourceTree = "<group>"; };
@@ -320,6 +324,7 @@
 		E75D39CF2A046A5300124E1F /* Share your Dog */ = {
 			isa = PBXGroup;
 			children = (
+				E79865B72A25099D00835B99 /* PICKER */,
 				E73B47BD2A1EF21A00E5BBC4 /* MEDIADATEN */,
 				E73B47BC2A1EF13900E5BBC4 /* SERVICELEISTUNGEN */,
 				E73B47BB2A1EF11500E5BBC4 /* API-KEYS */,
@@ -624,6 +629,15 @@
 			path = RoundedButtonStyle;
 			sourceTree = "<group>";
 		};
+		E79865B72A25099D00835B99 /* PICKER */ = {
+			isa = PBXGroup;
+			children = (
+				E79865B82A2509DC00835B99 /* ImagePicker.swift */,
+				E74FBF402A2550A400CC9CA6 /* EmojiPicker.swift */,
+			);
+			path = PICKER;
+			sourceTree = "<group>";
+		};
 		E7C113762A2161FC00240679 /* Player */ = {
 			isa = PBXGroup;
 			children = (
@@ -866,6 +880,7 @@
 				E790AA042A09ACA300C0C310 /* CoverImageView.swift in Sources */,
 				E790A9FE2A09A91300C0C310 /* ContactView.swift in Sources */,
 				E79521F82A0F177700E7915D /* NewsViewModel.swift in Sources */,
+				E79865B92A2509DC00835B99 /* ImagePicker.swift in Sources */,
 				E7FA07182A1D2FB200C1AD14 /* TassoRegistrationView.swift in Sources */,
 				E7FA07202A1ECE0A00C1AD14 /* Constants.swift in Sources */,
 				E79521E62A0F10C800E7915D /* Chat.swift in Sources */,
@@ -905,6 +920,7 @@
 				E7DE86AF2A0C7F8C00EFDF29 /* ChatViewModel.swift in Sources */,
 				E76DB9C22A20D1F40079E436 /* SearchBar.swift in Sources */,
 				E7F947402A145CF20067AF7B /* HealthView.swift in Sources */,
+				E74FBF412A2550A400CC9CA6 /* EmojiPicker.swift in Sources */,
 				E79521EC2A0F163A00E7915D /* Post.swift in Sources */,
 				E76DB9C42A20DF270079E436 /* DogServicesButtonView.swift in Sources */,
 				E78DE65F2A086612007915F7 /* AuthService.swift in Sources */,

@@ -54,14 +54,22 @@ func updateContact(contact: Contact) {
     contactList[index] = contact
 }
 
-func processUserMessage(message: String) {
-    let fakeResponse = generateFakeResponse(for: message)
-    let message = Message(id: UUID(), sender: "User", content: message, timestamp: Date())
-    messages.append(message)
-    
-    let responseMessage = Message(id: UUID(), sender: "Bot", content: fakeResponse, timestamp: Date())
-    messages.append(responseMessage)
-}
+    func processUserMessage(message: String, image: UIImage? = nil) {
+        let fakeResponse = generateFakeResponse(for: message)
+        
+        if let image = image {
+            let messageWithImage = Message(id: UUID(), sender: "User", content: "", timestamp: Date(), image: image)
+            messages.append(messageWithImage)
+        } else {
+            let messageWithoutImage = Message(id: UUID(), sender: "User", content: message, timestamp: Date(), image: nil)
+            messages.append(messageWithoutImage)
+        }
+        
+        let responseMessage = Message(id: UUID(), sender: "Bot", content: fakeResponse, timestamp: Date(), image: nil)
+        messages.append(responseMessage)
+    }
+
+
 
 func generateFakeResponse(for message: String) -> String {
     let fakeResponses = ["Das klingt interessant!", "Ich verstehe. Weiter.", "Erzähl mir mehr!", "Das ist faszinierend!"]
