@@ -84,6 +84,17 @@ struct ProfileView: View {
                         }
                         .buttonStyle(ServiceButtonStyle())
                         
+                        NavigationLink(destination: DogSearchView()) {
+                            ServiceButton(symbolName: "pawprint", color: .gray)
+                            
+                        }
+                        .buttonStyle(ServiceButtonStyle())
+                        
+                        NavigationLink(destination: DogSearchView()) {
+                            ServiceButton(symbolName: "pawprint", color: .gray)
+                            
+                        }
+                        .buttonStyle(ServiceButtonStyle())
                     }
                     .padding(.horizontal)
                     .padding(.vertical, 16)

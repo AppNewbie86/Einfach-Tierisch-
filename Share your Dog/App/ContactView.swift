@@ -142,6 +142,7 @@ struct ContactDetailView: View {
                     Spacer()
                 }
             }
+            .background(Color.brown)
         }
     }
 }
