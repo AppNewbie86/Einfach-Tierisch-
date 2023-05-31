@@ -55,7 +55,8 @@ struct ProfileView: View {
   
                     LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 2), spacing: 16) {
                         NavigationLink(destination: TrainingView()) {
-                            ServiceButton(symbolName: "figure.highintensity.intervaltraining", color: .gray)
+                            ServiceButton(imageName: "training")
+
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
                                         .stroke(Color.gray, lineWidth: 1)
@@ -67,32 +68,33 @@ struct ProfileView: View {
                         .padding()
 
                         NavigationLink(destination: PetSittingView()) {
-                            ServiceButton(symbolName: "magnifyingglass", color: .gray)
+                            ServiceButton(imageName: "boarding")
+
                             
                         }
                         .buttonStyle(ServiceButtonStyle())
                         
                         
                         NavigationLink(destination: ShopView()) {
-                            ServiceButton(symbolName: "bag.circle", color: .gray)
+                            ServiceButton(imageName: "grooming")
                         }
                         .buttonStyle(ServiceButtonStyle())
 
                         NavigationLink(destination: DogSearchView()) {
-                            ServiceButton(symbolName: "pawprint", color: .gray)
-                            
+                            ServiceButton(imageName: "health")
+
                         }
                         .buttonStyle(ServiceButtonStyle())
                         
                         NavigationLink(destination: DogSearchView()) {
-                            ServiceButton(symbolName: "pawprint", color: .gray)
-                            
+                            ServiceButton(imageName: "hero1")
+
                         }
                         .buttonStyle(ServiceButtonStyle())
                         
                         NavigationLink(destination: DogSearchView()) {
-                            ServiceButton(symbolName: "pawprint", color: .gray)
-                            
+                            ServiceButton(imageName: "hero1")
+
                         }
                         .buttonStyle(ServiceButtonStyle())
                     }

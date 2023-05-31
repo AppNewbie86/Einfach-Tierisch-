@@ -5,6 +5,8 @@
 //
 import SwiftUI
 struct AdoptionsView: View {
+    @State private var selectedTab = "CommunityView" // Track the selected tab
+
     let dogs: [Dog] = [
         Dog(name: "Buddy", breed: "Labrador Retriever", kidsfriendly: "Ja", origin: "Spain", title: "Verspielt und Kinderlieb",description: "Buddy kommt ursprpnglich aus\nUngarn und wurde aus schlimmen Zuständen\ngerettet und lebt seitdem hier bei uns", age: 3, imageName: "hero1"),
         Dog(name: "Max", breed: "German Shepherd", kidsfriendly: "Nein", origin: "Germany" ,title: "Sollte an erfahrene Hundehalter kommen",description: "Max brauch auf jedenfall\nErfahrung weil er ist draußen mit anderen\nHunden kaum zu bändigen", age: 2, imageName: "hero2"),
@@ -78,6 +80,11 @@ struct AdoptionsView: View {
                    }
                }
            }
+           
+           
+           Spacer() // Add spacer to push the TabBar to the bottom
+           TabBar(selectedTab: $selectedTab) // Add the TabBar view at the bottom
+
        }
    }
 

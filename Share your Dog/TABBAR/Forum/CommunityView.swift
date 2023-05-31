@@ -2,6 +2,8 @@ import SwiftUI
 import AVKit
 
 struct CommunityView: View {
+    @State private var selectedTab = "CommunityView" // Track the selected tab
+
     var body: some View {
         NavigationView {
             List {
@@ -40,6 +42,10 @@ struct CommunityView: View {
             .navigationTitle("Treffpunkt")
             .multilineTextAlignment(.center)
         }
+        
+        Spacer() // Add spacer to push the TabBar to the bottom
+        TabBar(selectedTab: $selectedTab) // Add the TabBar view at the bottom
+
     }
 }
 

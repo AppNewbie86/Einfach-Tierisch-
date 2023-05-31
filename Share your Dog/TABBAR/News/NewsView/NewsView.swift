@@ -2,7 +2,8 @@ import SwiftUI
 
 struct NewsView: View {
     @ObservedObject private var viewModel: NewsViewModel
-    
+    @State private var selectedTab = "NewsView" // Track the selected tab
+
     init(viewModel: NewsViewModel) {
         self.viewModel = viewModel
     }
@@ -31,6 +32,9 @@ struct NewsView: View {
                 AddPostView(viewModel: viewModel)
             }
         }
+        Spacer() // Add spacer to push the TabBar to the bottom
+        TabBar(selectedTab: $selectedTab) // Add the TabBar view at the bottom
+        
     }
     private var addButton: some View {
         Button(action: {

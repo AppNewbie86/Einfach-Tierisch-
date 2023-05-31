@@ -8,21 +8,20 @@
 import Foundation
 import SwiftUI
 
+// Hier ist der ServiceButton der immer das Imagename erwartet 
 
 struct ServiceButton: View {
-    let symbolName: String
-    let color: Color
+    let imageName: String
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .fill(color)
-            Image(systemName: symbolName)
+            Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 30, height: 30)
+                .frame(width: 170, height: 100)
                 .foregroundColor(.white)
         }
-        .frame(width: 80, height: 80)
+       // .frame(width: 80, height: 80)
     }
 }

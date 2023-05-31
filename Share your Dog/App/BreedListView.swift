@@ -3,7 +3,8 @@ import URLImage
 
 struct BreedListView: View {
     @ObservedObject var viewModel: BreedListViewModel
-    
+    @State private var selectedTab = "CommunityView" // Track the selected tab
+
     var body: some View {
         NavigationView {
             VStack {
@@ -29,6 +30,8 @@ struct BreedListView: View {
         .onAppear {
             viewModel.fetchBreeds()
         }
+        Spacer() // Add spacer to push the TabBar to the bottom
+        TabBar(selectedTab: $selectedTab) // Add the TabBar view at the bottom
     }
 }
 

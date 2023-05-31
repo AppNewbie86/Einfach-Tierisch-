@@ -7,8 +7,6 @@
 import SwiftUI
 import UIKit
 
-import SwiftUI
-import UIKit
 
 struct ChatView: View {
     @StateObject private var viewModel = ChatViewModel()
