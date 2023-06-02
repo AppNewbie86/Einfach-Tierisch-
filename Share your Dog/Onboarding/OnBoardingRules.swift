@@ -34,4 +34,5 @@ struct OnboardingRules: View {
             }
         }
     }
+
 }

@@ -25,17 +25,24 @@ struct RegistrationsView: View {
                     Spacer()
                         .frame(height: 100) // Abstand am oberen Rand
                     
-                    Text("einfach")
-                        .fontWeight(.bold)
-                        .foregroundColor(.gray)
-                        .font(.system(size: 40))
+//                    Text("einfach")
+//                        .fontWeight(.bold)
+//                        .foregroundColor(.gray)
+//                        .font(.system(size: 40))
+//                    
+//                    Text("Tierisch")
+//                        .fontWeight(.bold)
+//                        .foregroundColor(.red)
+//                        .font(.system(size: 60))
+//                        .padding(.vertical, 32)
+//
                     
-                    Text("Tierisch")
-                        .fontWeight(.bold)
-                        .foregroundColor(.red)
-                        .font(.system(size: 60))
-                        .padding(.vertical, 32)
+                    Image("LogoLinks")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .padding(.bottom, 32)
                     
+                    Spacer()
                     VStack(spacing: 5) {
                         InputView(text: $email, title: "Email Address", placeholder: "name@example.com")
                             .autocapitalization(.none)
@@ -85,7 +92,7 @@ struct RegistrationsView: View {
                             
                         }
                         .font(.system(size: 14))
-                        .padding(.bottom, 40)
+                        .padding(.bottom, 60)
                     }
                     .font(.system(size: 10))
                     .frame(maxWidth: .infinity)

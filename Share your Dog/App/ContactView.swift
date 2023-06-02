@@ -20,7 +20,7 @@ struct ContactView: View {
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
                 
-                Text("\nwir zeigen euch heute das Einfach Tierisch Team das wenn ihr was auf dem Herzen habt euch schnell geholfen wird ")
+                Text("Hier könnt ihr miteinander Kommunizieren und euch austauschen")
                     .font(.title)
                     .fontWeight(.thin)
                     .multilineTextAlignment(.center)
@@ -29,7 +29,7 @@ struct ContactView: View {
                 Button(action: {
                     self.showNextView = true
                 }) {
-                    Text("Zum Team")
+                    Text("Zum Chat")
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding()

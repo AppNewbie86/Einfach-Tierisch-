@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E722995F2A27F23800C22EFB /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722995E2A27F23800C22EFB /* DetailViewModel.swift */; };
+		E72299612A2876AA00C22EFB /* AppBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72299602A2876AA00C22EFB /* AppBarView.swift */; };
+		E72299632A2876D500C22EFB /* SearchAndScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72299622A2876D500C22EFB /* SearchAndScanView.swift */; };
+		E72299652A2876FA00C22EFB /* TagLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72299642A2876FA00C22EFB /* TagLineView.swift */; };
+		E72A03C62A29EE0F00CDD42F /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A03C42A29EE0F00CDD42F /* PlayfairDisplay-Bold.ttf */; };
+		E72A03C72A29EE0F00CDD42F /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A03C52A29EE0F00CDD42F /* PlayfairDisplay-Regular.ttf */; };
+		E72A03CA2A29F2E400CDD42F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72A03C92A29F2E400CDD42F /* SettingsView.swift */; };
+		E72A03CD2A29F32A00CDD42F /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72A03CC2A29F32A00CDD42F /* CreateProfileView.swift */; };
 		E73B47C22A20784F00E5BBC4 /* HeaderShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73B47C12A20784E00E5BBC4 /* HeaderShape.swift */; };
 		E74FBF412A2550A400CC9CA6 /* EmojiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FBF402A2550A400CC9CA6 /* EmojiPicker.swift */; };
 		E75D39D12A046A5300124E1F /* Share_your_DogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D39D02A046A5300124E1F /* Share_your_DogApp.swift */; };
@@ -90,10 +98,20 @@
 		E79865B62A249D9E00835B99 /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79865B52A249D9E00835B99 /* AccountSection.swift */; };
 		E79865B92A2509DC00835B99 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79865B82A2509DC00835B99 /* ImagePicker.swift */; };
 		E7C113782A21621600240679 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C113772A21621600240679 /* VideoPlayer.swift */; };
+		E7D4FA7D2A2964D600DA3988 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D4FA7C2A2964D600DA3988 /* ProductCardView.swift */; };
+		E7D4FA802A29655200DA3988 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D4FA7F2A29655200DA3988 /* HomeScreen.swift */; };
+		E7D4FA852A2966F500DA3988 /* DetailProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D4FA842A2966F500DA3988 /* DetailProductCardView.swift */; };
+		E7D4FA872A2967DD00DA3988 /* BottonNavBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D4FA862A2967DD00DA3988 /* BottonNavBarItem.swift */; };
+		E7D4FA8A2A296D2500DA3988 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D4FA892A296D2500DA3988 /* DescriptionView.swift */; };
 		E7DE86AF2A0C7F8C00EFDF29 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE86AE2A0C7F8C00EFDF29 /* ChatViewModel.swift */; };
 		E7E447452A0CC57300838620 /* MyLittleHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E447442A0CC57300838620 /* MyLittleHelperView.swift */; };
 		E7E447482A0CC59900838620 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E7E447472A0CC59900838620 /* Alamofire */; };
 		E7EA284A2A12D5C100A6B4D1 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EA28492A12D5C100A6B4D1 /* ShopView.swift */; };
+		E7ECAD202A26CF2000936125 /* BreedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ECAD1F2A26CF2000936125 /* BreedImageView.swift */; };
+		E7ECAD232A26D09100936125 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ECAD222A26D09100936125 /* BreedListViewModel.swift */; };
+		E7ECAD262A26D0F100936125 /* BreedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ECAD252A26D0F100936125 /* BreedImageViewModel.swift */; };
+		E7ECAD282A26D13A00936125 /* BreedListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ECAD272A26D13A00936125 /* BreedListResponse.swift */; };
+		E7ECAD2A2A26D15900936125 /* BreedImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ECAD292A26D15900936125 /* BreedImageResponse.swift */; };
 		E7F947322A14582C0067AF7B /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F947312A14582C0067AF7B /* ShopViewModel.swift */; };
 		E7F947342A1458940067AF7B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F947332A1458940067AF7B /* CardView.swift */; };
 		E7F947362A1458D00067AF7B /* ProductCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F947352A1458D00067AF7B /* ProductCategory.swift */; };
@@ -125,6 +143,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E722995E2A27F23800C22EFB /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		E72299602A2876AA00C22EFB /* AppBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarView.swift; sourceTree = "<group>"; };
+		E72299622A2876D500C22EFB /* SearchAndScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndScanView.swift; sourceTree = "<group>"; };
+		E72299642A2876FA00C22EFB /* TagLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLineView.swift; sourceTree = "<group>"; };
+		E72A03C42A29EE0F00CDD42F /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Bold.ttf"; path = "../../../../Desktop/PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		E72A03C52A29EE0F00CDD42F /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Regular.ttf"; path = "../../../../Desktop/PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		E72A03C92A29F2E400CDD42F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E72A03CC2A29F32A00CDD42F /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
 		E73B47C12A20784E00E5BBC4 /* HeaderShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderShape.swift; sourceTree = "<group>"; };
 		E74FBF402A2550A400CC9CA6 /* EmojiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPicker.swift; sourceTree = "<group>"; };
 		E75D39CD2A046A5300124E1F /* Share your Dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Share your Dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,9 +226,19 @@
 		E79865B52A249D9E00835B99 /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
 		E79865B82A2509DC00835B99 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E7C113772A21621600240679 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
+		E7D4FA7C2A2964D600DA3988 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
+		E7D4FA7F2A29655200DA3988 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		E7D4FA842A2966F500DA3988 /* DetailProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductCardView.swift; sourceTree = "<group>"; };
+		E7D4FA862A2967DD00DA3988 /* BottonNavBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottonNavBarItem.swift; path = "../New Group/BottonNavBarItem.swift"; sourceTree = "<group>"; };
+		E7D4FA892A296D2500DA3988 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		E7DE86AE2A0C7F8C00EFDF29 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		E7E447442A0CC57300838620 /* MyLittleHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLittleHelperView.swift; sourceTree = "<group>"; };
 		E7EA28492A12D5C100A6B4D1 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		E7ECAD1F2A26CF2000936125 /* BreedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImageView.swift; sourceTree = "<group>"; };
+		E7ECAD222A26D09100936125 /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
+		E7ECAD252A26D0F100936125 /* BreedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImageViewModel.swift; sourceTree = "<group>"; };
+		E7ECAD272A26D13A00936125 /* BreedListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListResponse.swift; sourceTree = "<group>"; };
+		E7ECAD292A26D15900936125 /* BreedImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImageResponse.swift; sourceTree = "<group>"; };
 		E7F947312A14582C0067AF7B /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
 		E7F947332A1458940067AF7B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E7F947352A1458D00067AF7B /* ProductCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategory.swift; sourceTree = "<group>"; };
@@ -254,6 +290,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E722995D2A27F22E00C22EFB /* DetailViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E722995E2A27F23800C22EFB /* DetailViewModel.swift */,
+			);
+			path = DetailViewModel;
+			sourceTree = "<group>";
+		};
+		E72A03C32A29EDE000CDD42F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E72A03C42A29EE0F00CDD42F /* PlayfairDisplay-Bold.ttf */,
+				E72A03C52A29EE0F00CDD42F /* PlayfairDisplay-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E72A03C82A29F2D200CDD42F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E72A03C92A29F2E400CDD42F /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E72A03CB2A29F31900CDD42F /* CreateProfil */ = {
+			isa = PBXGroup;
+			children = (
+				E72A03CC2A29F32A00CDD42F /* CreateProfileView.swift */,
+			);
+			path = CreateProfil;
+			sourceTree = "<group>";
+		};
 		E73B47BB2A1EF11500E5BBC4 /* API-KEYS */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +393,7 @@
 		E75D39CF2A046A5300124E1F /* Share your Dog */ = {
 			isa = PBXGroup;
 			children = (
+				E72A03C32A29EDE000CDD42F /* Fonts */,
 				E79865B72A25099D00835B99 /* PICKER */,
 				E73B47BD2A1EF21A00E5BBC4 /* MEDIADATEN */,
 				E73B47BC2A1EF13900E5BBC4 /* SERVICELEISTUNGEN */,
@@ -401,6 +471,9 @@
 		E75D3A412A07B58F00124E1F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				E722995D2A27F22E00C22EFB /* DetailViewModel */,
+				E7ECAD242A26D0E700936125 /* BreedImageViewModel */,
+				E7ECAD212A26D08500936125 /* BreedListViewModel */,
 				E7DE86AD2A0C7F7500EFDF29 /* ChatViewModel */,
 				E790A9F62A09782100C0C310 /* GalleryView.swift */,
 				E75D39D02A046A5300124E1F /* Share_your_DogApp.swift */,
@@ -411,6 +484,7 @@
 				E7E447442A0CC57300838620 /* MyLittleHelperView.swift */,
 				E79521DC2A0E5DF300E7915D /* FavoriteDetailView.swift */,
 				E795220F2A10C42400E7915D /* DogTrackingView.swift */,
+				E7ECAD1F2A26CF2000936125 /* BreedImageView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -429,7 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				E73B47C02A20782D00E5BBC4 /* HeaderShape */,
-				E75D3A472A07BC4800124E1F /* MEMBERVIEW */,
+				E75D3A472A07BC4800124E1F /* MEMBERBEREICH */,
 				E75D3A452A07BBF000124E1F /* MUTTERVIEW */,
 				E75D3A442A07B60700124E1F /* Auth */,
 			);
@@ -467,27 +541,39 @@
 				E79521EB2A0F163A00E7915D /* Post.swift */,
 				E79522192A11BB4B00E7915D /* ServiceCards.swift */,
 				E7F947352A1458D00067AF7B /* ProductCategory.swift */,
+				E7ECAD272A26D13A00936125 /* BreedListResponse.swift */,
+				E7ECAD292A26D15900936125 /* BreedImageResponse.swift */,
 			);
 			path = MODELS;
 			sourceTree = "<group>";
 		};
-		E75D3A472A07BC4800124E1F /* MEMBERVIEW */ = {
+		E75D3A472A07BC4800124E1F /* MEMBERBEREICH */ = {
 			isa = PBXGroup;
 			children = (
-				E75D3A4E2A08344F00124E1F /* ProfileView.swift */,
-				E76DB9C12A20D1F40079E436 /* SearchBar.swift */,
+				E72A03CB2A29F31900CDD42F /* CreateProfil */,
+				E72A03C82A29F2D200CDD42F /* Settings */,
+				E7D4FA832A2966D600DA3988 /* DetailProductCardView */,
+				E7D4FA822A2965A600DA3988 /* SearchBar */,
+				E7D4FA812A29658D00DA3988 /* ProfileView */,
+				E7D4FA7E2A29654000DA3988 /* HomeScreen */,
+				E7D4FA7B2A2964BA00DA3988 /* ProductCardView */,
 				E79865AD2A23887F00835B99 /* HeaderShape2.swift */,
 				E79865AF2A23DFA300835B99 /* ServiceButton.swift */,
 				E79865B12A249D2A00835B99 /* ServiceSection.swift */,
 				E79865B32A249D4E00835B99 /* ServiceCardView.swift */,
 				E79865B52A249D9E00835B99 /* AccountSection.swift */,
+				E72299602A2876AA00C22EFB /* AppBarView.swift */,
+				E72299622A2876D500C22EFB /* SearchAndScanView.swift */,
+				E72299642A2876FA00C22EFB /* TagLineView.swift */,
+				E7D4FA892A296D2500DA3988 /* DescriptionView.swift */,
 			);
-			path = MEMBERVIEW;
+			path = MEMBERBEREICH;
 			sourceTree = "<group>";
 		};
 		E7751EFC2A0C597E007296C2 /* TABBAR */ = {
 			isa = PBXGroup;
 			children = (
+				E7D4FA882A29683D00DA3988 /* BottonNavBarItem */,
 				E79521E42A0F108C00E7915D /* Adoption */,
 				E79521E32A0F107200E7915D /* Forum */,
 				E79521E22A0F105A00E7915D /* News */,
@@ -646,6 +732,54 @@
 			path = Player;
 			sourceTree = "<group>";
 		};
+		E7D4FA7B2A2964BA00DA3988 /* ProductCardView */ = {
+			isa = PBXGroup;
+			children = (
+				E7D4FA7C2A2964D600DA3988 /* ProductCardView.swift */,
+			);
+			path = ProductCardView;
+			sourceTree = "<group>";
+		};
+		E7D4FA7E2A29654000DA3988 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E7D4FA7F2A29655200DA3988 /* HomeScreen.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		E7D4FA812A29658D00DA3988 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				E75D3A4E2A08344F00124E1F /* ProfileView.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		E7D4FA822A2965A600DA3988 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				E76DB9C12A20D1F40079E436 /* SearchBar.swift */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		E7D4FA832A2966D600DA3988 /* DetailProductCardView */ = {
+			isa = PBXGroup;
+			children = (
+				E7D4FA842A2966F500DA3988 /* DetailProductCardView.swift */,
+			);
+			path = DetailProductCardView;
+			sourceTree = "<group>";
+		};
+		E7D4FA882A29683D00DA3988 /* BottonNavBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				E7D4FA862A2967DD00DA3988 /* BottonNavBarItem.swift */,
+			);
+			path = BottonNavBarItem;
+			sourceTree = "<group>";
+		};
 		E7DE86AD2A0C7F7500EFDF29 /* ChatViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,6 +799,22 @@
 				E79865AB2A2385F800835B99 /* ShopItem.swift */,
 			);
 			path = Grooming;
+			sourceTree = "<group>";
+		};
+		E7ECAD212A26D08500936125 /* BreedListViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E7ECAD222A26D09100936125 /* BreedListViewModel.swift */,
+			);
+			path = BreedListViewModel;
+			sourceTree = "<group>";
+		};
+		E7ECAD242A26D0E700936125 /* BreedImageViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E7ECAD252A26D0F100936125 /* BreedImageViewModel.swift */,
+			);
+			path = BreedImageViewModel;
 			sourceTree = "<group>";
 		};
 		E7F9473B2A1459E90067AF7B /* Training */ = {
@@ -827,6 +977,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E72A03C72A29EE0F00CDD42F /* PlayfairDisplay-Regular.ttf in Resources */,
+				E72A03C62A29EE0F00CDD42F /* PlayfairDisplay-Bold.ttf in Resources */,
 				E75D39FD2A04DD3100124E1F /* success.m4a in Resources */,
 				E79521DF2A0E71D100E7915D /* Anzeichen.mp4 in Resources */,
 				E75D39FC2A04DD3100124E1F /* chimeup.mp3 in Resources */,
@@ -862,6 +1014,8 @@
 				E790AA002A09A99B00C0C310 /* VideoListView.swift in Sources */,
 				E79521FB2A0F9AD100E7915D /* TopicView.swift in Sources */,
 				E7F9473A2A14597D0067AF7B /* DetailProductView.swift in Sources */,
+				E722995F2A27F23800C22EFB /* DetailViewModel.swift in Sources */,
+				E7D4FA872A2967DD00DA3988 /* BottonNavBarItem.swift in Sources */,
 				E79521EF2A0F16B900E7915D /* PostView.swift in Sources */,
 				E79521F52A0F173A00E7915D /* ImagePickerView.swift in Sources */,
 				E7751F042A0C65DC007296C2 /* ChatView.swift in Sources */,
@@ -872,6 +1026,8 @@
 				E7751EFB2A0C574E007296C2 /* Contact.swift in Sources */,
 				E75D3A082A05776800124E1F /* CircleGroupView.swift in Sources */,
 				E75D3A492A08024900124E1F /* LoginView.swift in Sources */,
+				E72A03CD2A29F32A00CDD42F /* CreateProfileView.swift in Sources */,
+				E72299632A2876D500C22EFB /* SearchAndScanView.swift in Sources */,
 				E7F947382A1459020067AF7B /* CategoryView.swift in Sources */,
 				E75D3A4F2A08344F00124E1F /* ProfileView.swift in Sources */,
 				E79865AE2A23887F00835B99 /* HeaderShape2.swift in Sources */,
@@ -892,17 +1048,24 @@
 				E75D39D32A046A5300124E1F /* ContentView.swift in Sources */,
 				E79521E82A0F10E500E7915D /* Message.swift in Sources */,
 				E795221A2A11BB4B00E7915D /* ServiceCards.swift in Sources */,
+				E7D4FA7D2A2964D600DA3988 /* ProductCardView.swift in Sources */,
 				E75D3A4B2A08054000124E1F /* InputView.swift in Sources */,
 				E79865AC2A2385F800835B99 /* ShopItem.swift in Sources */,
+				E7D4FA852A2966F500DA3988 /* DetailProductCardView.swift in Sources */,
 				E79521FD2A0F9B2E00E7915D /* DetailView.swift in Sources */,
 				E79522002A0F9B9E00E7915D /* RoundedButtonStyle.swift in Sources */,
 				E7751F062A0C7345007296C2 /* PetSittingView.swift in Sources */,
 				E7FA071A2A1D41FA00C1AD14 /* TassoHelpRegistrationView.swift in Sources */,
 				E79865B22A249D2A00835B99 /* ServiceSection.swift in Sources */,
 				E79522062A103A6B00E7915D /* DogServiceShape.swift in Sources */,
+				E7D4FA802A29655200DA3988 /* HomeScreen.swift in Sources */,
+				E7ECAD202A26CF2000936125 /* BreedImageView.swift in Sources */,
 				E79865B62A249D9E00835B99 /* AccountSection.swift in Sources */,
+				E72299612A2876AA00C22EFB /* AppBarView.swift in Sources */,
 				E79865B02A23DFA300835B99 /* ServiceButton.swift in Sources */,
 				E78DE6462A085A0C007915F7 /* SettingsRowView.swift in Sources */,
+				E7ECAD282A26D13A00936125 /* BreedListResponse.swift in Sources */,
+				E7ECAD262A26D0F100936125 /* BreedImageViewModel.swift in Sources */,
 				E73B47C22A20784F00E5BBC4 /* HeaderShape.swift in Sources */,
 				E7751F022A0C59CB007296C2 /* AdoptionsView.swift in Sources */,
 				E79522022A1039D100E7915D /* TableView.swift in Sources */,
@@ -910,9 +1073,11 @@
 				E79865B42A249D4E00835B99 /* ServiceCardView.swift in Sources */,
 				E77AAEA22A08D407008B8FB5 /* OnBoardingRules.swift in Sources */,
 				E78DE6482A085D14007915F7 /* User.swift in Sources */,
+				E72299652A2876FA00C22EFB /* TagLineView.swift in Sources */,
 				E75D39D12A046A5300124E1F /* Share_your_DogApp.swift in Sources */,
 				E79521DD2A0E5DF300E7915D /* FavoriteDetailView.swift in Sources */,
 				E75D3A4D2A08155600124E1F /* RegistrationsView.swift in Sources */,
+				E72A03CA2A29F2E400CDD42F /* SettingsView.swift in Sources */,
 				E7751F002A0C59B5007296C2 /* CommunityView.swift in Sources */,
 				E7F947342A1458940067AF7B /* CardView.swift in Sources */,
 				E7F947322A14582C0067AF7B /* ShopViewModel.swift in Sources */,
@@ -927,9 +1092,12 @@
 				E7751EC02A0A7CC8007296C2 /* CoverImage.swift in Sources */,
 				E79521F22A0F16F300E7915D /* AddPostView.swift in Sources */,
 				E7751F082A0C7360007296C2 /* DogOwner.swift in Sources */,
+				E7ECAD232A26D09100936125 /* BreedListViewModel.swift in Sources */,
 				E79522102A10C42400E7915D /* DogTrackingView.swift in Sources */,
+				E7ECAD2A2A26D15900936125 /* BreedImageResponse.swift in Sources */,
 				E79522042A103A2700E7915D /* SponsorshipFormView.swift in Sources */,
 				E79521DB2A0E5C5700E7915D /* FavoriteShape.swift in Sources */,
+				E7D4FA8A2A296D2500DA3988 /* DescriptionView.swift in Sources */,
 				E77AAEA02A08D361008B8FB5 /* SplashView.swift in Sources */,
 				E79521E12A0EF10600E7915D /* Dog.swift in Sources */,
 			);

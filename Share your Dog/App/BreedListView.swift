@@ -1,9 +1,11 @@
 import SwiftUI
 import URLImage
 
+// TabTarget Hunderassen
+
 struct BreedListView: View {
-    @ObservedObject var viewModel: BreedListViewModel
-    @State private var selectedTab = "CommunityView" // Track the selected tab
+    @ObservedObject var viewModel: BreedListViewModel // Überwachung durch BreedListViewModel
+    @State private var selectedTab = "BreedListView" // Zeigt das akt. Ziel
 
     var body: some View {
         NavigationView {
@@ -25,137 +27,25 @@ struct BreedListView: View {
                     Text(error.localizedDescription)
                 }
             }
-            .navigationTitle("Bekannte Hunderassen")
+            .navigationTitle("HundeWiki") // Zeigt den Titel an oben
         }
         .onAppear {
             viewModel.fetchBreeds()
         }
-        Spacer() // Add spacer to push the TabBar to the bottom
-        TabBar(selectedTab: $selectedTab) // Add the TabBar view at the bottom
-    }
-}
-
-struct BreedImageView: View {
-    let breed: String
-    @ObservedObject var viewModel: BreedImageViewModel
-    @State private var selectedButton = "FavoriteButton" // Button who was selected
-
-    
-    var body: some View {
-        VStack {
+        .background(
             
-            if viewModel.isLoading {
-                ProgressView()
-            } else if let imageUrl = viewModel.imageUrl {
-                
-                URLImage(imageUrl) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding()
-                }
-                Text("Breed: \(breed.capitalized)")
-            } else if let error = viewModel.error {
-                Text(error.localizedDescription)
-            } else {
-                ProgressView()
-            }
-        }
-        .onAppear {
-            viewModel.fetchBreedImage(breed: breed)
-        }
-        .navigationTitle(breed.capitalized)
+            LinearGradient(
+                gradient: Gradient(colors: [.brown.opacity(0.10), .brown.opacity(0.07)]),
+                startPoint: .topLeading,
+                endPoint: .bottomLeading
+            )
+            .edgesIgnoringSafeArea(.all)
+            
+        )
+       
+        
     }
-}
-
-
-class BreedListViewModel: ObservableObject {
-    @Published var breeds: [String: [String]]?
-    @Published var isLoading = false
-    @Published var error: Error?
     
-    func fetchBreeds() {
-        isLoading = true
-        error = nil
-        
-        let url = URL(string: "https://dog.ceo/api/breeds/list/all")!
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            DispatchQueue.main.async {
-                self.isLoading = false
-                
-                if let error = error {
-                    self.error = error
-                    return
-                }
-                
-                guard let data = data else {
-                    self.error = NSError(domain: "Data Error", code: 0, userInfo: nil)
-                    return
-                }
-                
-                do {
-                    let result = try JSONDecoder().decode(BreedListResponse.self, from: data)
-                    self.breeds = result.message
-                } catch {
-                    self.error = error
-                }
-            }
-        }.resume()
-    }
-}
-
-class BreedImageViewModel: ObservableObject {
-    @Published var imageUrl: URL?
-    @Published var isLoading = false
-    @Published var error: Error?
-    
-    func fetchBreedImage(breed: String) {
-        isLoading = true
-        error = nil
-        
-        let urlString = "https://dog.ceo/api/breed/\(breed)/images/random"
-        guard let url = URL(string: urlString) else {
-            error = NSError(domain: "Invalid URL", code: 0, userInfo: nil)
-            isLoading = false
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            DispatchQueue.main.async {
-                self.isLoading = false
-                
-                if let error = error {
-                    self.error = error
-                    return
-                }
-                
-                guard let data = data else {
-                    self.error = NSError(domain: "Data Error", code: 0, userInfo: nil)
-                    return
-                }
-                
-                do {
-                    let result = try JSONDecoder().decode(BreedImageResponse.self, from: data)
-                    if let imageUrlString = result.message, let imageUrl = URL(string: imageUrlString) {
-                        self.imageUrl = imageUrl
-                    } else {
-                        self.error = NSError(domain: "Invalid Image URL", code: 0, userInfo: nil)
-                    }
-                } catch {
-                    self.error = error
-                }
-            }
-        }.resume()
-    }
-}
-struct BreedListResponse: Decodable {
-    let message: [String: [String]]
-    let status: String
-}
-
-struct BreedImageResponse: Decodable {
-    let message: String?
-    let status: String
 }
 
 

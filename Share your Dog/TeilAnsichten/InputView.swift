@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+// Eingabefelder
+
+// Email
+// Password
+
 struct InputView: View {
     
     @Binding var text: String

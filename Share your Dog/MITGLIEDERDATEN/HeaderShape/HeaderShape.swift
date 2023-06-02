@@ -7,57 +7,68 @@
 
 import SwiftUI
 struct HeaderShape: View {
+    
+    @EnvironmentObject var authService: AuthService
+
     @State private var isDropdownOpen = false
     @State private var isNewsUpdateOpen = false
     
     var body: some View {
-        ZStack {
-            HStack {
-                Spacer()
-                //                Text("My Doggy House")
-                //                    .foregroundColor(.white)
-                //                    .font(.title)
-                //                    .fontWeight(.bold)
-                Spacer()
-            }
-            .padding()
-            .background(Color.brown)
+        if let user = authService.user {
             
-            HStack {
-                Button(action: {
-                    isDropdownOpen.toggle()
-                }) {
-                    Image(systemName: "menucard")
-                        .foregroundColor(.white)
-                        .padding()
-                }
-                .popover(isPresented: $isDropdownOpen, arrowEdge: .top) {
-                    DropdownMenu(isOpen: $isDropdownOpen)
-                }
-                
-                Spacer()
-                Text("MYDOGHOUSE")
-                Spacer()
-                Button(action: {
-                    isNewsUpdateOpen.toggle()
-                }) {
-                    Image(systemName: "bell")
-                        .foregroundColor(.white)
-                        .padding()
-                }
-                .popover(isPresented: $isNewsUpdateOpen, arrowEdge: .top) {
-                    NewsUpdateView(isOpen: $isNewsUpdateOpen)
-                }
-            }
-            .frame(width: 400,height: 80)
-            .background(Color.black)
-            .ignoresSafeArea(.all)
+            ZStack {
+                HStack {
+                    Spacer()
 
-            
+                    Spacer()
+                    //                Text("My Doggy House")
+                    //                    .foregroundColor(.white)
+                    //                    .font(.title)
+                    //                    .fontWeight(.bold)
+                    Spacer()
+                }
+//                .padding()
+//                .background(Color.black.opacity(0.75))
+                Spacer()
+
+                HStack {
+                    Button(action: {
+                        isDropdownOpen.toggle()
+                    }) {
+                        Image(systemName: "menucard")
+                            .foregroundColor(.white)
+                            .padding()
+                    }
+                    .popover(isPresented: $isDropdownOpen, arrowEdge: .top) {
+                        DropdownMenu(isOpen: $isDropdownOpen)
+                    }
+                    
+                    Spacer()
+                    Text("Hi \(user.userName), willkommen!")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                    Spacer()
+                    Button(action: {
+                        isNewsUpdateOpen.toggle()
+                    }) {
+                        Image(systemName: "bell")
+                            .foregroundColor(.white)
+                            .padding()
+                    }
+                    .popover(isPresented: $isNewsUpdateOpen, arrowEdge: .top) {
+                        NewsUpdateView(isOpen: $isNewsUpdateOpen)
+                    }
+                }
+                .frame(width: 400,height: 80)
+                .background(Color.brown.opacity(0.75))
+                .ignoresSafeArea(.all)
+                
+                
+            }
         }
+        
     }
-    
-    
     struct DropdownMenu: View {
         @Binding var isOpen: Bool
         
@@ -87,7 +98,7 @@ struct HeaderShape: View {
                         .padding()
                 }
             }
-            .background(Color.white)
+            .background(Color.gray)
         }
     }
     

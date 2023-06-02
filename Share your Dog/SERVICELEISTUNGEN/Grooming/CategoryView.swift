@@ -8,21 +8,27 @@
 import SwiftUI
 
 struct CategoryView: View {
-    let category: ProductCategory
-    let viewModel: ShopViewModel
-    
+    let isActive : Bool
+    let text: String
+
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(category.name)
-                .font(.headline)
-                .padding(.horizontal)
+        VStack(alignment: .leading, spacing: 0) {
+           Text(text)
+               .font(.system(size: 20))
+               .fontWeight(.medium)
+               .foregroundColor(isActive ? Color("Primary"): Color.black.opacity(0.5))
             
-            ForEach(category.products, id: \.self) { product in
-                NavigationLink(destination: Text("Product Details: \(product)")) {
+            if(isActive) {
+                Color("Primary")
+            }
+      //          .padding(.horizontal)
+            
+       //     ForEach(category.products, id: \.self) { product in
+         //       NavigationLink(destination: Text("Product Details: \(product)")) {
                     HStack {
-                        Text(product)
-                            .padding()
-                            .foregroundColor(.black)
+        //                Text(product)
+         //                   .padding()
+         //                   .foregroundColor(.black)
                         
                         Spacer()
                     }
@@ -33,6 +39,4 @@ struct CategoryView: View {
                 }
             }
         }
-        .padding(.bottom)
-    }
-}
+  

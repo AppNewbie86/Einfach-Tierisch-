@@ -32,9 +32,7 @@ struct NewsView: View {
                 AddPostView(viewModel: viewModel)
             }
         }
-        Spacer() // Add spacer to push the TabBar to the bottom
-        TabBar(selectedTab: $selectedTab) // Add the TabBar view at the bottom
-        
+       
     }
     private var addButton: some View {
         Button(action: {

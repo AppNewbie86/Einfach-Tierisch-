@@ -27,7 +27,7 @@ struct AdoptionsView: View {
                        Image("berge")
                            .resizable()
                            .scaledToFill()
-                           .opacity(0.2)
+                           .opacity(0.6)
                            .edgesIgnoringSafeArea(.all)
                        
                        VStack {
@@ -40,7 +40,8 @@ struct AdoptionsView: View {
                                }
                            }
                            .pickerStyle(SegmentedPickerStyle())
-                           .padding(.horizontal, 16)
+                           .background(Color.brown)
+                           .padding(.horizontal, 24)
                            
                            Spacer()
                            
@@ -71,7 +72,7 @@ struct AdoptionsView: View {
                                .cornerRadius(10)
                                .padding(16)
                        }
-                       .navigationBarTitle("Hunde\nsuchen ein Zuhause")
+                       .navigationBarTitle("Suchen Zuhause")
                        .sheet(isPresented: $isShowingDetailView) {
                            if let selectedDogIndex = selectedDogIndex {
                                DetailView(dog: dogs[selectedDogIndex])
@@ -82,9 +83,7 @@ struct AdoptionsView: View {
            }
            
            
-           Spacer() // Add spacer to push the TabBar to the bottom
-           TabBar(selectedTab: $selectedTab) // Add the TabBar view at the bottom
-
+          
        }
    }
 

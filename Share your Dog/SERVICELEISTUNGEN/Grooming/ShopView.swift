@@ -77,7 +77,7 @@ struct ShopView: View {
             ScrollView {
                 VStack(spacing: 20) {
                     ForEach(viewModel.productCategories, id: \.name) { category in
-                        CategoryView(category: category, viewModel: viewModel)
+                        CategoryView(isActive: true, text: "Example Text")
                     }
                 }
                 .padding(.horizontal)

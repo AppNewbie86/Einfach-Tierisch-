@@ -21,12 +21,12 @@ struct LoginView: View {
                 VStack(spacing: 16) {
                     Spacer().frame(height: 50)
                     
-                    Text("Tierisch")
-                        .font(.system(size: 60))
-                        .fontWeight(.bold)
-                        .foregroundColor(.red)
-                        .padding(.vertical, 32)
-                    
+//                    Text("Tierisch")
+//                        .font(.system(size: 60))
+//                        .fontWeight(.bold)
+//                        .foregroundColor(.red)
+//                        .padding(.vertical, 32)
+//                    
                     Image("LogoLinks")
                         .resizable()
                         .frame(width: 100, height: 100)
