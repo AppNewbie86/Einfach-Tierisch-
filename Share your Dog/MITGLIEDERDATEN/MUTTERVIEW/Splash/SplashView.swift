@@ -16,12 +16,21 @@ struct SplashView: View {
         if isActive {
             ContentView()
         } else {
-            ZStack {
-                // Ein Farbverlauf wird als Hintergrund festgelegt
-                LinearGradient(colors: [.brown.opacity(0.25), .brown.opacity(0.75)], startPoint: .topLeading, endPoint: .bottomLeading)
-                    .edgesIgnoringSafeArea(.all)
-                
+           
                 VStack {
+                    
+                    Text("Tierisch Gut")
+                        .foregroundColor(.white)
+                        .font(.custom("Playfairdisplay-Bold", size: 40))
+                        .bold()
+                        .padding(.all)
+                    Text("MY DOGGY\n ORGANIZER")
+                        .foregroundColor(.white)
+                        .font(.custom("Playfairdisplay-Bold", size: 60))
+                        .multilineTextAlignment(.center)
+                        .bold()
+                        .padding(.all)
+                    
                     Spacer()
                     Image("compass")
                         .resizable()
@@ -38,16 +47,17 @@ struct SplashView: View {
                             }
                         }
 
-                    Text("Einfach Tierisch ....")
-                        .foregroundColor(.brown)
-                        .font(.title)
-                        .bold()
-                        .padding(.all)
-                    
+                   
                     Spacer()
                 }
+                .background(
+                    Image("background3")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .edgesIgnoringSafeArea(.all)
+                )
             }
         }
     }
-}
+
 

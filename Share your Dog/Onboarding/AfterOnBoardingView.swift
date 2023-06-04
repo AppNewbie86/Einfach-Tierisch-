@@ -1,90 +1,91 @@
-//  AfterOnBoardingView.swift
-//  Share your Dog
-//
-//  Created by Marcel Zimmermann on 08.05.23.
-//
+
 import SwiftUI
-import SwiftUI
+
 
 struct AfterOnBoarding: View {
     
-    @AppStorage("onBoarding")  var onBoarding = false
+    @AppStorage("onBoarding") var onBoarding = false
     
     @State private var showLoginView = false
-    @State private var RestartOnboarding = false
-    @State private var size = 0.8
-    @State private var opacity = 0.5
-    
-    @State private var imageRotation: Double = 0
+    @State private var showRegisterView = false
     
     var body: some View {
-        ZStack {
-            // Hintergrundbild
-            Image("background3")
-                .resizable()
-                .opacity(0.55)
-                .aspectRatio(contentMode: .fill)
-                .edgesIgnoringSafeArea(.all)
+        
+        VStack {
+            // Header: Explore
+            VStack {
+                Text("DOGGYBOOK")
+                    .font(.custom("Playfairdisplay-Bold", size: 60))
+                    .foregroundColor(.brown)
+                    .padding(.bottom, 30)
+            }
+            .padding(.top, 100)
             
-            VStack(spacing: 40) {
-                HStack { // HStack mit dem Logo
-                    Image("LogoLinks")
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                        .padding(.leading, 32)
-                        .padding(.top, 50)
-                    
-                    Spacer()
-                }
-                
-                Spacer()
-                    .frame(height: 100) // Abstand am oberen Rand
-                
-                // Begrüßungstext
-                Text("Wuff")
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.white)
-                    .font(.system(size: 60, weight: .regular))
-                    .foregroundColor(.white.opacity(1.00))
-                    .padding()
-                
-                Text("schön\ndich hier zu treffen......")
-                    .multilineTextAlignment(.leading)
-                    .foregroundColor(.white)
-                    .font(.system(size: 24, weight: .regular))
-                    .foregroundColor(.black.opacity(1.00))
-                    .padding()
-                
+            // Body: Domingo
+            VStack {
                 Spacer()
                 
-                // Logo oder Bild
-                Spacer()
+                Image("DOMINGO")
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    .blur(radius: 0.5)
+                    .opacity(1.05)
+                    .shadow(color: .gray, radius: 0.65, x: 0.35, y: 0.35)
+                    .padding(.bottom, 90)
                 
-                // Anmelde-Button
+                Spacer()
+            }
+            
+            // Footer: Buttons
+            VStack {
+                // Login Button
                 Button(action: {
                     self.showLoginView = true
                 }, label: {
-                    Text("Zum Login")
-                        .font(.system(.title3, design: .rounded))
+                    Text("Anmelden")
+                        .font(.system(.subheadline, design: .rounded))
                         .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.brown)
+                        .cornerRadius(10)
                 })
-                .buttonStyle(BorderedProminentButtonStyle())
-                .controlSize(.large)
-                .foregroundColor(Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255))
-                .frame(maxWidth: .infinity)
-                
-                .shadow(radius: 10)
-                .padding(.bottom, 100) // Abstand unten hinzufügen
+                .buttonStyle(PlainButtonStyle())
+                .frame(width: 300)
+                .shadow(color: .gray, radius: 0.65, x: 0.35, y: 0.35)
+                .padding(.bottom, 20)
                 .sheet(isPresented: $showLoginView) {
                     LoginView()
                 }
+                
+                // Register Button
+                Button(action: {
+                    self.showRegisterView = true
+                }, label: {
+                    Text("Registrieren")
+                        .font(.system(.subheadline, design: .rounded))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.brown)
+                        .cornerRadius(10)
+                })
+                .buttonStyle(PlainButtonStyle())
+                .frame(width: 300)
+                .shadow(color: .gray, radius: 0.65, x: 0.35, y: 0.35)
+                .padding(.bottom, 20)
+                .sheet(isPresented: $showRegisterView) {
+                    RegistrationsView()
+                }
             }
+            .padding(.bottom, 80)
         }
-    }
-}
-
-struct AfterOnBoarding_Previews: PreviewProvider {
-    static var previews: some View {
-        AfterOnBoarding()
+        .background(
+            Image("background3")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .edgesIgnoringSafeArea(.all)
+                .opacity(0.4)
+        )
     }
 }

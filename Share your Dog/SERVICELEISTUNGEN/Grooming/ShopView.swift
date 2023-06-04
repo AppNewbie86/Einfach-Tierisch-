@@ -13,16 +13,15 @@ struct ShopItem: Identifiable {
     let imageURL: String
 }
 
+
 struct ShopView: View {
     @ObservedObject private var viewModel = ShopViewModel()
     @State private var isMenuVisible = false
     @State private var isAddProductVisible = false
-    
     @State private var isCreateAdVisible = false
-
     @State private var title = ""
-       @State private var description = ""
-
+    @State private var description = ""
+    
     var body: some View {
         VStack {
             // Header
@@ -34,8 +33,6 @@ struct ShopView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
-                
-                
                 
                 HStack {
                     Button(action: {
@@ -76,9 +73,10 @@ struct ShopView: View {
             // Product Categories
             ScrollView {
                 VStack(spacing: 20) {
-                    ForEach(viewModel.productCategories, id: \.name) { category in
-                        CategoryView(isActive: true, text: "Example Text")
+                    ForEach(viewModel.productCategories) { category in
+                        CategoryView(isActive: true, text: category.name)
                     }
+
                 }
                 .padding(.horizontal)
             }
@@ -108,44 +106,45 @@ struct ShopView: View {
                     Text("Ihre Anzeigen")
                 }
             }
+            
         }
-
         .sheet(isPresented: $isAddProductVisible) {
-            VStack(spacing: 20) {
-                Text("Produkt hinzufügen")
-                    .font(.title)
-                
-                TextField("Title", text: $title)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                TextField("Description", text: $description)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                Button(action: {
-                    // Handle send button action
-                }) {
-                    Text("Send")
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.brown)
-                        .cornerRadius(10)
+                VStack(spacing: 20) {
+                    Text("Produkt hinzufügen")
+                        .font(.title)
+                    
+                    TextField("Title", text: $title)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
+                    TextField("Description", text: $description)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
+                    Button(action: {
+                        // Handle send button action
+                    }) {
+                        Text("Send")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.brown)
+                            .cornerRadius(10)
+                    }
                 }
+                .padding()
+                .background(Color.gray)
+                .cornerRadius(20)
             }
-            .padding()
-            .background(Color.gray)
-            .cornerRadius(20)
+
         }
-
-    }
+    
 }
-
-
+    
 
 struct CreateAdView: View {
     @State private var adTitle = ""
     @State private var adDescription = ""
     @State private var isMenuVisible = false
     @State private var isCreateAdVisible = false
+    
     var body: some View {
         VStack(spacing: 20) {
             Text("Neue Anzeige aufgeben")

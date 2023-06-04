@@ -11,7 +11,10 @@ import SwiftUI
 
 struct AppBarView: View {
     @State private var showSettings = false // Zustand für das Dropdown-Menü
-    
+    @State private var showBuyedArticles = false // Zustand für das Dropdown-Menü
+
+    @State private var user: User?
+
     var body: some View {
         HStack {
             Button(action: {
@@ -30,17 +33,30 @@ struct AppBarView: View {
             )
 
             .popover(isPresented: $showSettings, arrowEdge: .top) {
+
                 // Dropdown-Menü-Inhalt hier einfügen, z. B. eine Liste von Aktionen
                 NavigationView {
                     List {
                         NavigationLink(destination: SettingsView()) {
-                            Text("Settings")
+                            Text("Einstellungen")
+                        }
+                        NavigationLink(destination: BuyedArticleView()) {
+                            Text("Gekauft")
+                        }
+                        NavigationLink(destination: UserHeaderView()) {
+                            Text("User Status")
                         }
                         Button(action: {
-                            // Logout-Logik hier einfügen
+                            AuthService().signOut()
                         }) {
-                            Text("Logout")
+                        Text("Abmelden")
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.red)
+                                .cornerRadius(10)
                         }
+                        
+                        
                         
                     }
                     .navigationBarTitle("Menu")
@@ -79,4 +95,32 @@ struct AppBarView_Previews: PreviewProvider {
     static var previews: some View {
         AppBarView()
     }
+}
+
+import SwiftUI
+
+struct BuyedArticleView: View {
+    @State private var boughtArticles: [Article] = [] // Beispielhafter Zustand mit einer Liste der gekauften Artikel
+    
+    var body: some View {
+        NavigationView {
+            List(boughtArticles) { article in
+                VStack(alignment: .leading) {
+                    Text(article.title)
+                        .font(.headline)
+                    Text(article.description)
+                        .font(.subheadline)
+                }
+            }
+            .navigationBarTitle("Gekaufte Artikel")
+        }
+    }
+}
+
+struct Article : Identifiable {
+    var id = UUID()
+    
+    let title: String
+    let description: String
+    // Weitere Eigenschaften für den Artikel
 }

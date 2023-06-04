@@ -1,8 +1,4 @@
-//
-//  Share your Dog
-//
-//  Created by Marcel Zimmermann on 11.05.23.
-//
+
 import SwiftUI
 struct AdoptionsView: View {
     @State private var selectedTab = "CommunityView" // Track the selected tab
@@ -18,74 +14,70 @@ struct AdoptionsView: View {
     
        @State private var selectedDogIndex: Int?
        @State private var isShowingDetailView = false
-       
-       var body: some View {
-           TabView {
-               NavigationView {
-                   ZStack {
-                       // Hintergrundbild "berge" hinzufügen
-                       Image("berge")
-                           .resizable()
-                           .scaledToFill()
-                           .opacity(0.6)
-                           .edgesIgnoringSafeArea(.all)
-                       
-                       VStack {
-                           Spacer()
-                           
-                           Picker(selection: $selectedDogIndex, label: Text("")) {
-                               ForEach(dogs.indices, id: \.self) { index in
-                                   Text(dogs[index].name)
-                                       .tag(index)
-                               }
-                           }
-                           .pickerStyle(SegmentedPickerStyle())
-                           .background(Color.brown)
-                           .padding(.horizontal, 24)
-                           
-                           Spacer()
-                           
-                           ZStack {
-                               ForEach(dogs.indices) { index in
-                                   DogCardView(dog: dogs[index])
-                                       .frame(width: index == selectedDogIndex ? 200 : 150, height: index == selectedDogIndex ? 300 : 200)
-                                       .offset(y: index == selectedDogIndex ? -100 : 0)
-                                       .animation(.spring())
-                                       .onTapGesture {
-                                           if selectedDogIndex == index {
-                                               isShowingDetailView = true
-                                           } else {
-                                               selectedDogIndex = index
-                                           }
-                                       }
-                               }
-                           }
-                           
-                           Spacer()
-                           
-                           Text(dogs[selectedDogIndex ?? 0].description)
-                               .font(.body)
-                               .foregroundColor(.black)
-                               .multilineTextAlignment(.center)
-                               .padding()
-                               .background(Color.white.opacity(0.8))
-                               .cornerRadius(10)
-                               .padding(16)
-                       }
-                       .navigationBarTitle("Suchen Zuhause")
-                       .sheet(isPresented: $isShowingDetailView) {
-                           if let selectedDogIndex = selectedDogIndex {
-                               DetailView(dog: dogs[selectedDogIndex])
-                           }
-                       }
-                   }
-               }
-           }
-           
-           
-          
-       }
-   }
+    var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+        
+        var body: some View {
+            TabView {
+                NavigationView {
+                    ZStack {
+                        // Hintergrundbild "berge" hinzufügen
+                        Image("berge")
+                            .resizable()
+                            .scaledToFill()
+                            .opacity(0.6)
+                            .edgesIgnoringSafeArea(.all)
+                        
+                        VStack {
+                            Spacer()
+                            
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                LazyHStack(spacing: 16) {
+                                    ForEach(dogs.indices, id: \.self) { index in
+                                        Button(action: {
+                                            selectedDogIndex = index
+                                        }) {
+                                            DogCardView(dog: dogs[index])
+                                                .frame(width: 150, height: 200)
+                                                .opacity(selectedDogIndex == index ? 1.0 : 0.5)
+                                        }
+                                    }
+                                }
+                                .padding(.horizontal, 24)
+                            }
+                            .frame(height: 220)
+                            .padding(.vertical)
+                            .background(Color.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.gray.opacity(0.5), lineWidth: 1)
+                            )
+
+
+                            
+                            Spacer()
+                            
+                            if let selectedDogIndex = selectedDogIndex {
+                                Text(dogs[selectedDogIndex].description)
+                                    .font(.body)
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.center)
+                                    .padding()
+                                    .background(Color.white.opacity(0.8))
+                                    .cornerRadius(10)
+                                    .padding(16)
+                            }
+                        }
+                        .navigationBarTitle("Suchen Zuhause")
+                        .sheet(isPresented: $isShowingDetailView) {
+                            if let selectedDogIndex = selectedDogIndex {
+                                DetailView(dog: dogs[selectedDogIndex])
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
    struct DogCardView: View {
        let dog: Dog

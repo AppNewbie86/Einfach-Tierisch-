@@ -19,7 +19,6 @@ struct ContentView: View {
                     OnboardingRules()
                 }
             }
-            .background(Color.brown)
             .ignoresSafeArea(.all)
         }
        

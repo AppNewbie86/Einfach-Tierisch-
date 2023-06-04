@@ -15,6 +15,8 @@
 		E72A03C72A29EE0F00CDD42F /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72A03C52A29EE0F00CDD42F /* PlayfairDisplay-Regular.ttf */; };
 		E72A03CA2A29F2E400CDD42F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72A03C92A29F2E400CDD42F /* SettingsView.swift */; };
 		E72A03CD2A29F32A00CDD42F /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72A03CC2A29F32A00CDD42F /* CreateProfileView.swift */; };
+		E72A03D12A2AB12700CDD42F /* ColorDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72A03D02A2AB12700CDD42F /* ColorDotView.swift */; };
+		E72A03D32A2ADF6A00CDD42F /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72A03D22A2ADF6A00CDD42F /* UserHeaderView.swift */; };
 		E73B47C22A20784F00E5BBC4 /* HeaderShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73B47C12A20784E00E5BBC4 /* HeaderShape.swift */; };
 		E74FBF412A2550A400CC9CA6 /* EmojiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74FBF402A2550A400CC9CA6 /* EmojiPicker.swift */; };
 		E75D39D12A046A5300124E1F /* Share_your_DogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D39D02A046A5300124E1F /* Share_your_DogApp.swift */; };
@@ -151,6 +153,8 @@
 		E72A03C52A29EE0F00CDD42F /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Regular.ttf"; path = "../../../../Desktop/PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		E72A03C92A29F2E400CDD42F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E72A03CC2A29F32A00CDD42F /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
+		E72A03D02A2AB12700CDD42F /* ColorDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDotView.swift; sourceTree = "<group>"; };
+		E72A03D22A2ADF6A00CDD42F /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		E73B47C12A20784E00E5BBC4 /* HeaderShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderShape.swift; sourceTree = "<group>"; };
 		E74FBF402A2550A400CC9CA6 /* EmojiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPicker.swift; sourceTree = "<group>"; };
 		E75D39CD2A046A5300124E1F /* Share your Dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Share your Dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -323,6 +327,22 @@
 			path = CreateProfil;
 			sourceTree = "<group>";
 		};
+		E72A03CE2A2A9D9D00CDD42F /* DescriptionView */ = {
+			isa = PBXGroup;
+			children = (
+				E7D4FA892A296D2500DA3988 /* DescriptionView.swift */,
+			);
+			path = DescriptionView;
+			sourceTree = "<group>";
+		};
+		E72A03CF2A2AB10B00CDD42F /* ColorDotView */ = {
+			isa = PBXGroup;
+			children = (
+				E72A03D02A2AB12700CDD42F /* ColorDotView.swift */,
+			);
+			path = ColorDotView;
+			sourceTree = "<group>";
+		};
 		E73B47BB2A1EF11500E5BBC4 /* API-KEYS */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +413,7 @@
 		E75D39CF2A046A5300124E1F /* Share your Dog */ = {
 			isa = PBXGroup;
 			children = (
+				E72A03CF2A2AB10B00CDD42F /* ColorDotView */,
 				E72A03C32A29EDE000CDD42F /* Fonts */,
 				E79865B72A25099D00835B99 /* PICKER */,
 				E73B47BD2A1EF21A00E5BBC4 /* MEDIADATEN */,
@@ -550,22 +571,12 @@
 		E75D3A472A07BC4800124E1F /* MEMBERBEREICH */ = {
 			isa = PBXGroup;
 			children = (
-				E72A03CB2A29F31900CDD42F /* CreateProfil */,
-				E72A03C82A29F2D200CDD42F /* Settings */,
-				E7D4FA832A2966D600DA3988 /* DetailProductCardView */,
-				E7D4FA822A2965A600DA3988 /* SearchBar */,
 				E7D4FA812A29658D00DA3988 /* ProfileView */,
-				E7D4FA7E2A29654000DA3988 /* HomeScreen */,
-				E7D4FA7B2A2964BA00DA3988 /* ProductCardView */,
 				E79865AD2A23887F00835B99 /* HeaderShape2.swift */,
 				E79865AF2A23DFA300835B99 /* ServiceButton.swift */,
 				E79865B12A249D2A00835B99 /* ServiceSection.swift */,
 				E79865B32A249D4E00835B99 /* ServiceCardView.swift */,
 				E79865B52A249D9E00835B99 /* AccountSection.swift */,
-				E72299602A2876AA00C22EFB /* AppBarView.swift */,
-				E72299622A2876D500C22EFB /* SearchAndScanView.swift */,
-				E72299642A2876FA00C22EFB /* TagLineView.swift */,
-				E7D4FA892A296D2500DA3988 /* DescriptionView.swift */,
 			);
 			path = MEMBERBEREICH;
 			sourceTree = "<group>";
@@ -743,7 +754,11 @@
 		E7D4FA7E2A29654000DA3988 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				E72299602A2876AA00C22EFB /* AppBarView.swift */,
+				E72299622A2876D500C22EFB /* SearchAndScanView.swift */,
+				E72299642A2876FA00C22EFB /* TagLineView.swift */,
 				E7D4FA7F2A29655200DA3988 /* HomeScreen.swift */,
+				E72A03D22A2ADF6A00CDD42F /* UserHeaderView.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -751,6 +766,13 @@
 		E7D4FA812A29658D00DA3988 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
+				E72A03CE2A2A9D9D00CDD42F /* DescriptionView */,
+				E7D4FA832A2966D600DA3988 /* DetailProductCardView */,
+				E72A03C82A29F2D200CDD42F /* Settings */,
+				E72A03CB2A29F31900CDD42F /* CreateProfil */,
+				E7D4FA822A2965A600DA3988 /* SearchBar */,
+				E7D4FA7B2A2964BA00DA3988 /* ProductCardView */,
+				E7D4FA7E2A29654000DA3988 /* HomeScreen */,
 				E75D3A4E2A08344F00124E1F /* ProfileView.swift */,
 			);
 			path = ProfileView;
@@ -1025,6 +1047,7 @@
 				E7751EFE2A0C599A007296C2 /* NewsView.swift in Sources */,
 				E7751EFB2A0C574E007296C2 /* Contact.swift in Sources */,
 				E75D3A082A05776800124E1F /* CircleGroupView.swift in Sources */,
+				E72A03D32A2ADF6A00CDD42F /* UserHeaderView.swift in Sources */,
 				E75D3A492A08024900124E1F /* LoginView.swift in Sources */,
 				E72A03CD2A29F32A00CDD42F /* CreateProfileView.swift in Sources */,
 				E72299632A2876D500C22EFB /* SearchAndScanView.swift in Sources */,
@@ -1049,6 +1072,7 @@
 				E79521E82A0F10E500E7915D /* Message.swift in Sources */,
 				E795221A2A11BB4B00E7915D /* ServiceCards.swift in Sources */,
 				E7D4FA7D2A2964D600DA3988 /* ProductCardView.swift in Sources */,
+				E72A03D12A2AB12700CDD42F /* ColorDotView.swift in Sources */,
 				E75D3A4B2A08054000124E1F /* InputView.swift in Sources */,
 				E79865AC2A2385F800835B99 /* ShopItem.swift in Sources */,
 				E7D4FA852A2966F500DA3988 /* DetailProductCardView.swift in Sources */,
@@ -1258,6 +1282,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Share your Dog/Preview Content\"";
+				DEVELOPMENT_TEAM = 55C3RLSR2Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Share-your-Dog-Info.plist";
@@ -1286,6 +1311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Share your Dog/Preview Content\"";
+				DEVELOPMENT_TEAM = 55C3RLSR2Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Share-your-Dog-Info.plist";
